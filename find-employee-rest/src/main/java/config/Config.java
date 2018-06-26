@@ -9,7 +9,7 @@ import org.springframework.ws.transport.http.HttpComponentsMessageSender;
 
 @Configuration
 public class Config {
-	
+	/*
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
@@ -32,5 +32,5 @@ public class Config {
     	webServiceTemplate.setMessageSender(new HttpComponentsMessageSender());
     	return webServiceTemplate;
     }
-    
+    */
 }

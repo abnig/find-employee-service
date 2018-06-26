@@ -16,14 +16,14 @@ import model.dao.service.EmployeeRepositoryService;
 public class EmployeeController {
 
 	@Autowired
-	private EmployeeRepositoryService employeeRepositoryService;
+	private EmployeeRepositoryService employeeRepositoryServiceImpl;
 
 	@HystrixCommand(fallbackMethod = "reliable")
 	@RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public Employee greeting(@PathVariable(value = "id") Long id) {
 		System.out.println("Recieved ID:" + id);
-		return this. employeeRepositoryService.findById(id);
+		return this. employeeRepositoryServiceImpl.findById(id);
 	}
 
 	public Employee reliable(Long id) {

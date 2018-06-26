@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 
 @EnableCircuitBreaker
-@SpringBootApplication(scanBasePackages = {"rest", "soap", "config"})
+@SpringBootApplication(scanBasePackages = {"rest", "model", "config"})
 public class RestApplication {
 
     public static void main(String[] args) {
