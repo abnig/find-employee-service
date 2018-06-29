@@ -46,6 +46,6 @@ public class InMemoryDBTest {
     @Test
     public void test_FindById() {
         Employee e = employeeRepositoryServiceImpl.findById(1L);
-        Assert.assertTrue("Lname".equals( e.getLastName()));
+        Assert.assertTrue("Lname1".equals( e.getLastName()));
     }
 }
