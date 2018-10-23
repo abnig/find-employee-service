@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "T_EMP", schema="TESTDB")
@@ -33,6 +34,9 @@ public class Employee {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "JOIN_DATE")
 	private Date joinDate;
+	
+	@Transient
+	private Boolean circuitBreakerResponseIndicator;
 
 	@Column(name = "DEPARTMENT")
 	private String department;
@@ -83,6 +87,14 @@ public class Employee {
 
 	public void setDepartment(String department) {
 		this.department = department;
+	}
+	
+	public Boolean getCircuitBreakerResponseIndicator() {
+		return circuitBreakerResponseIndicator;
+	}
+
+	public void setCircuitBreakerResponseIndicator(Boolean circuitBreakerResponseIndicator) {
+		this.circuitBreakerResponseIndicator = circuitBreakerResponseIndicator;
 	}
 
 	@Override
