@@ -1,6 +1,9 @@
+server:
+  port: 7070
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://eureka-service.local.pcfdev.io/eureka
+      defaultZone: http://localhost:8761/eureka/eureka/
     register-with-eureka: true
     fetch-registry: true
